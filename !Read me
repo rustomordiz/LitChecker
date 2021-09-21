@@ -1,0 +1,81 @@
+To prevent blablabla...
+---------------------------------------------------
+<?php   require_once 'config.php';  
+    session_start();
+    if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true)
+    {
+        header("location: index.php");
+        exit;
+    }
+?>
+---------------------------------------------------
+
+Notes
+
+Need Update
+
+- Security Login
+	✔ Session_user problem
+	✔ Session_destroy problem
+	- hashed password (not required)
+	* is username case-sensitive? NO!
+
+Manage Profile.php
+	✔ Change password function
+	- Change information function
+
+
+Dashboard.php
+	- Total Views algorithm
+	- favorites algorithm
+
+	✔Change Password Button will be moved inside the Manage Profile button
+
+Works.php
+	
+	✔ VIEW Button 
+	- working fine
+
+	✔ Edit button
+		- need to reselect 'TYPE' to prevent type update to database
+		- warns the user to reinput.
+
+	❌ ADD record button
+	- Problem in Upload/Sending  does not send info at database
+	- Recode this.
+
+	❌ Delete/Remove Button
+	- system cant find Modal ID cant delete for now
+
+	❌ Print Button
+	- system cant find Modal ID cant delete for now
+
+	
+
+Result_category.php
+	
+	-"No result found!" still displayed eventhough there is.
+
+Database
+
+	* Type was change to integer instead of text
+	
+	Legend:
+		1 - Article
+		2 - Case Study
+		3 - Thesis
+
+Manage_password.php
+
+	- header.login.php GUI Problem
+
+
+----------------------------
+
+- index.php fetching now working
+
+✔ recode Line 13 at dashboard.php
+✔ recode Line 58 at works.php
+✔ Add Role Function
+
+- Author duplication in search_author.php
